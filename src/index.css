@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins",sans-serif;
+}
+:root
+{
+    --bg-color: #080808;
+    --secondary-bg-color: #131313;
+    --box-color: #292929;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+
+
+
