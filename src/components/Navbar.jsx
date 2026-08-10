@@ -1,49 +1,93 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 
+
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
 
-const items = ['Home', 'Services', 'Projects', 'Education', 'Contact']
-    const [active, setActive] = useState('Home')
-    const itemsRef = useRef(null)      // ref on .nav-items instead of .floating-nav
-    const indicatorRef = useRef(null)
+    return (
+        <>
+            <nav className="navbar">
+                <div className="navbar-container">
+                    {/* Left Section - Logo & Info */}
+                    <div className="navbar-left">
+                        <div className="navbar-logo">
+                            <div className="logo-icon">B</div>
+                            <span>Bishesh Maharjan</span>
+                        </div>
+                    </div>
 
-    useEffect(() => {
-        const container = itemsRef.current
-        const indicator = indicatorRef.current
-        if (!container || !indicator) return
-
-        const activeEl = Array.from(container.querySelectorAll('.nav-item')).find(
-            (el) => el.dataset.value === active
-        )
-        if (activeEl) {
-            const rect = activeEl.getBoundingClientRect()
-            const parentRect = container.getBoundingClientRect()
-            const left = rect.left - parentRect.left
-            indicator.style.width = `${rect.width}px`
-            indicator.style.transform = `translateX(${left}px)`
-        }
-    }, [active])
-
-  return (
-    <div className="navbar-wrap">
-            <nav className="floating-nav">
-                <div className="nav-items" ref={itemsRef}>
-                    <div className="active-indicator" ref={indicatorRef} />
-                    {items.map((it) => (
-                        <button
-                            key={it}
-                            className={`nav-item ${active === it ? 'active' : ''}`}
-                            data-value={it}
-                            onClick={() => setActive(it)}
-                        >
-                            {it}
+                    {/* Right Section - Social & CTA (Desktop Only) */}
+                    <div className="navbar-right">
+                        <a href="https://github.com/bish3sh" className="icon-btn" aria-label="Github" target="_blank" rel="noopener noreferrer">
+                            <i className='bx bxl-github'></i>
+                        </a>
+                        {/* <a href="mailto:maharjanbishesh8@gmail.com" className="icon-btn" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                            ✉
+                        </a> */}
+                        <a href="https://www.linkedin.com/in/bishesh-maharjan" className="icon-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            in
+                        </a>
+                        <button className="cta-btn" onClick={() => window.open('/Portfolio.pdf', '_blank')}>
+                            Resume
                         </button>
-                    ))}
+                    </div>
+
+                    {/* Hamburger */}
+                    <button 
+                        className={`hamburger ${isOpen ? 'active' : ''}`}
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </nav>
-        </div>
-  )
+
+            {/* Mobile Menu */}
+            {isOpen && (
+                <div className="mobile-menu">
+                    <div className="mobile-menu-content">
+                        <a
+                            href="https://github.com/bish3sh"
+                            className="mobile-icon-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            <i className='bx bxl-github'></i>
+                            <span>Github</span>
+                        </a>
+                        <a href="#contact-section" className="mobile-icon-btn" onClick={() => setIsOpen(false)}>
+                            ✉
+                            <span>Email</span>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/bishesh-maharjan"
+                            className="mobile-icon-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            in
+                            <span>LinkedIn</span>
+                        </a>
+                        <button
+                            className="mobile-cta-btn"
+                            onClick={() => {
+                                window.open('/Portfolio.pdf', '_blank')
+                                setIsOpen(false)
+                            }}
+                        >
+                            Resume
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
+    )
 }
 
 export default Navbar
