@@ -1,23 +1,25 @@
 
 .home{
     min-height: 100vh;
-    padding: 0rem 12% 0rem;
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 4vw, 12%);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15rem;
+    gap: clamp(2rem, 6vw, 15rem);
+    flex-wrap: wrap;
     box-shadow: 0 1px 52px rgba(0, 0, 0, 0.15);
 }
 
 .home-content
 {
+    flex: 1 1 420px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
-    /* width: auto; */
+    max-width: 640px;
 }
 span
 {
@@ -47,12 +49,19 @@ span
 }
 
 .home-img{
+    flex: 0 1 320px;
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
 }
 .home-img img{
     position: relative;
-    top: 3rem;
-    width: 28vw;
+    top: 0;
+    width: min(28vw, 320px);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
