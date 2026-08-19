@@ -5,7 +5,7 @@ import Reveal from './Reveal'
 
 const Intro = () => {
   return (
-    <div className='home'>
+    <div className='home' id='intro-section'>
       <div className="home-main">
         <div className="home-content">
         <Reveal as="h1" delay={0}>Hi, I'm <span>Bishesh</span> </Reveal>
