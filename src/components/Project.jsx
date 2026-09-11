@@ -5,8 +5,15 @@ import todoImg from '../assets/todo.png'
 import weatherImg from '../assets/weather.png'
 import sastoImg from '../assets/sasto.png'
 import anyaImg from '../assets/anya-home.jpg'
-import raktImg from '../assets/raktsewa.png'
-import minaImg from '../assets/mina.png'
+import anyaImg2 from '../assets/anya-home-2.jpg'
+import raktImg from '../assets/raktsewa.jpg'
+import raktImg2 from '../assets/raktsewa-2.png'
+import minaImg from '../assets/mina.jpg'
+import minaImg2 from '../assets/mina-2.png'
+import neweraImg from '../assets/new-era.jpg'
+import neweraImg2 from '../assets/new-era-2.jpg'
+import what2eatImg from '../assets/eat.jpg'
+import what2eatImg2 from '../assets/eat-2.jpg'
 import Reveal from './Reveal'
 
 const simpleProjects = [
@@ -33,18 +40,15 @@ const simpleProjects = [
     }
 ]
 
+// NOTE: hoverImage defaults to the same image so nothing breaks visually.
+// Drop in a second screenshot per project (e.g. import sastoImgHover from '../assets/sasto-2.png')
+// and set hoverImage: sastoImgHover to get the actual crossfade swap.
 const selectedProjects = [
-    {
-        title: 'Sasto Masto',
-        description: 'A database-focused food ordering platform built for high-speed navigation, intuitive menu browsing, and real-time order tracking.',
-        image: sastoImg,
-        tech: ['C#'],
-        link: 'https://bish3sh.github.io/Calculator/'
-    },
     {
         title: 'Aanya',
         description: 'A modern online clothing store designed for effortless catalog browsing, personalized style discovery, and a seamless checkout experience.',
         image: anyaImg,
+        hoverImage: anyaImg2,
         tech: ['HTML', 'CSS', 'JavaScript'],
         link: 'https://bish3sh.github.io/To-do-Web-App/'
     },
@@ -52,6 +56,7 @@ const selectedProjects = [
         title: 'RaktaSewa',
         description: 'A real-time blood bank platform built to connect donors with emergency requests, streamline inventory tracking, and speed up life-saving blood distribution.',
         image: raktImg,
+        hoverImage: raktImg2,
         tech: ['HTML', 'CSS', 'JavaScript', 'Php'],
         link: 'https://bish3sh.github.io/Weather-app/'
     },
@@ -59,15 +64,32 @@ const selectedProjects = [
         title: 'Mina',
         description: 'A modern and intelligent telemedicine platform developed as a university project, hackthon project to offer a seamless experience for online medical consultations, appointment bookings, and AI-assisted healthcare support.',
         image: minaImg,
-        tech: ['HTML', 'CSS', 'JavaScript'],
+        hoverImage: minaImg2,
+        tech: ['HTML', 'CSS', 'JavaScript','Python'],
         link: 'https://bish3sh.github.io/Weather-app/'
+    },
+    {
+        title: 'New Era',
+        description: 'A sleek digital footwear boutique engineered for immersive collection exploration, dynamic fit guidance, and a friction-free purchase journey.',
+        image: neweraImg,
+        hoverImage: neweraImg2,
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        link: 'https://bish3sh.github.io/Calculator/'
+    },
+    {
+        title: 'What2Eat',
+        description: 'An intuitive, modern food ordering app designed for seamless menu browsing, customization, and real-time tracking.',
+        image: what2eatImg,
+        hoverImage: what2eatImg2,
+        tech: ['HTML', 'CSS', 'JavaScript','PHP'],
+        link: 'https://bish3sh.github.io/Calculator/'
     }
 ]
 
 const Project = () => {
   return (
     <div className='project'>
-        <h2 className="heading">Simple Projects</h2>
+        {/* <h2 className="heading">Simple Projects</h2>
 
         <div className="web-projects">
             <div className="web-projects-container">
@@ -102,7 +124,7 @@ const Project = () => {
                     
                 ))}
             </div>
-        </div>
+        </div> */}
 
         <h2 className="heading">Works</h2>
         <div className="web-projects-2">
@@ -111,7 +133,8 @@ const Project = () => {
                     <Reveal key={proj.title} className="project-item" delay={i * 150}>
                         <div className="project-card-2">
                             <div className="card-image-2">
-                                <img src={proj.image} alt={proj.title} />
+                                <img src={proj.image} alt={proj.title} className="img-base" />
+                                <img src={proj.hoverImage} alt={`${proj.title} alternate view`} className="img-hover" />
                             </div>
                         </div>
 
