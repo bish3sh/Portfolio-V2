@@ -9,7 +9,7 @@ const timelineData = [
         text: 'Completed +2 by taking the Physical Courses in Science field in GIHE college.'
     },
     {
-        date: '2021 - Present',
+        date: '2021 - 2025',
         title: 'Kantipur City College',
         text: 'Currently attending Bachelor in Computer Application(IT) in Kantipur City College.'
     },
