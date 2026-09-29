@@ -6,7 +6,7 @@ const services = [
     {
         title: 'Frontend Development',
         icon: 'bx bx-code-alt',
-        tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS'],
     },
     {
         title: 'Backend Development',

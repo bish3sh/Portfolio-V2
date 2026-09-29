@@ -10,10 +10,14 @@ import raktImg from '../assets/raktsewa.jpg'
 import raktImg2 from '../assets/raktsewa-2.png'
 import minaImg from '../assets/mina.jpg'
 import minaImg2 from '../assets/mina-2.png'
-import neweraImg from '../assets/new-era.jpg'
-import neweraImg2 from '../assets/new-era-2.jpg'
+import neweraImg from '../assets/new-era.png'
+import neweraImg2 from '../assets/new-era-2.png'
 import what2eatImg from '../assets/eat.jpg'
 import what2eatImg2 from '../assets/eat-2.jpg'
+import chitraImg from '../assets/chitra.png'
+import chitraImg2 from '../assets/chitra-2.png'
+import bodhisattvaImg from '../assets/bodhi.png'
+import bodhisattvaImg2 from '../assets/bodhi-2.png'
 import Reveal from './Reveal'
 
 const simpleProjects = [
@@ -45,45 +49,61 @@ const simpleProjects = [
 // and set hoverImage: sastoImgHover to get the actual crossfade swap.
 const selectedProjects = [
     {
-        title: 'Aanya',
-        description: 'A modern online clothing store designed for effortless catalog browsing, personalized style discovery, and a seamless checkout experience.',
-        image: anyaImg,
-        hoverImage: anyaImg2,
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        link: 'https://bish3sh.github.io/To-do-Web-App/'
-    },
-    {
-        title: 'RaktaSewa',
-        description: 'A real-time blood bank platform built to connect donors with emergency requests, streamline inventory tracking, and speed up life-saving blood distribution.',
-        image: raktImg,
-        hoverImage: raktImg2,
-        tech: ['HTML', 'CSS', 'JavaScript', 'Php'],
-        link: 'https://bish3sh.github.io/Weather-app/'
-    },
-      {
         title: 'Mina',
         description: 'A modern and intelligent telemedicine platform developed as a university project, hackthon project to offer a seamless experience for online medical consultations, appointment bookings, and AI-assisted healthcare support.',
         image: minaImg,
         hoverImage: minaImg2,
-        tech: ['HTML', 'CSS', 'JavaScript','Python'],
-        link: 'https://bish3sh.github.io/Weather-app/'
+        tech: ['React', 'Tailwind', 'Node.js', 'Express', 'Firebase', 'WebRTC'],
+        link: 'https://mina-healthcare.web.app/'
+    },
+    {
+        title: 'Chitra Tech',
+        description: 'A custom digital platform built to showcase modern IT services, software development capabilities, and web development solutions.',
+        image: chitraImg,
+        hoverImage: chitraImg2,
+        tech: ['React (TypeScript)', 'Tailwind CSS', 'Radix UI', 'Lenis', 'Firebase'],
+        link: 'https://chitratech.com.np/'
+    },
+    {
+        title: 'Bodhisattva International',
+        description: 'A modern web platform designed to digitize the gallery experience for art enthusiasts and museum visitors.',
+        image: bodhisattvaImg,
+        hoverImage: bodhisattvaImg2,
+        tech: ['React (TypeScript)', 'Tailwind CSS'],
+        link: 'https://bodhisattvainternational.vercel.app/'
     },
     {
         title: 'New Era',
         description: 'A sleek digital footwear boutique engineered for immersive collection exploration, dynamic fit guidance, and a friction-free purchase journey.',
         image: neweraImg,
         hoverImage: neweraImg2,
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        link: 'https://bish3sh.github.io/Calculator/'
+        tech: ['React', 'CSS3', 'Node.js'],
+        link: 'https://neweranepal.vercel.app/'
     },
     {
         title: 'What2Eat',
         description: 'An intuitive, modern food ordering app designed for seamless menu browsing, customization, and real-time tracking.',
         image: what2eatImg,
         hoverImage: what2eatImg2,
-        tech: ['HTML', 'CSS', 'JavaScript','PHP'],
-        link: 'https://bish3sh.github.io/Calculator/'
-    }
+        tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)','React Native', 'PHP', 'MySQL'],
+        link: ''
+    },
+    // {
+    //     title: 'RaktaSewa',
+    //     description: 'A real-time blood bank platform built to connect donors with emergency requests, streamline inventory tracking, and speed up life-saving blood distribution.',
+    //     image: raktImg,
+    //     hoverImage: raktImg2,
+    //     tech: ['HTML', 'CSS', 'JavaScript', 'Php'],
+    //     link: 'https://sudeep845.github.io/Hopedrops/'
+    // },
+    //  {
+    //     title: 'Aanya',
+    //     description: 'A modern online clothing store designed for effortless catalog browsing, personalized style discovery, and a seamless checkout experience.',
+    //     image: anyaImg,
+    //     hoverImage: anyaImg2,
+    //     tech: ['HTML', 'CSS', 'JavaScript'],
+    //     link: 'https://bish3sh.github.io/To-do-Web-App/'
+    // }, 
 ]
 
 const Project = () => {
@@ -129,33 +149,61 @@ const Project = () => {
         <h2 className="heading">Works</h2>
         <div className="web-projects-2">
             <div className="web-projects-container-2">
-                {selectedProjects.map((proj, i) => (
-                    <Reveal key={proj.title} className="project-item" delay={i * 150}>
-                        <div className="project-card-2">
-                            <div className="card-image-2">
-                                <img src={proj.image} alt={proj.title} className="img-base" />
-                                <img src={proj.hoverImage} alt={`${proj.title} alternate view`} className="img-hover" />
-                            </div>
-                        </div>
+                {selectedProjects.map((proj, i) => {
+                    const hasLink = Boolean(proj.link)
+                    // Render an <a> when there's a link, a plain <div> when there isn't
+                    const CardTag = hasLink ? 'a' : 'div'
+                    const linkProps = hasLink
+                        ? {
+                            href: proj.link,
+                            target: '_blank',
+                            rel: 'noopener noreferrer',
+                            'aria-label': `Open ${proj.title}`,
+                            style: { display: 'block', color: 'inherit', textDecoration: 'none', cursor: 'pointer' }
+                        }
+                        : {}
 
-                        <div className="project-info">
-                            <div className="project-tags">
-                                {proj.tech.map((t) => (
-                                    <span className="tag-pill" key={t}>
-                                        <span className="dot"></span>
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
+                    return (
+                        <Reveal key={proj.title} className="project-item" delay={i * 150}>
+                            <CardTag className="project-card-2" {...linkProps}>
+                                <div className="card-image-2">
+                                    <img src={proj.image} alt={proj.title} className="img-base" />
+                                    <img src={proj.hoverImage} alt={`${proj.title} alternate view`} className="img-hover" />
+                                </div>
+                            </CardTag>
 
-                            <div className="info-header">
-                                <h3>{proj.title}</h3>
-                            </div>
+                            <div className="project-info">
+                                <div className="project-tags">
+                                    {proj.tech.map((t) => (
+                                        <span className="tag-pill" key={t}>
+                                            <span className="dot"></span>
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
 
-                            <p className="project-description">{proj.description}</p>
-                        </div>
-                    </Reveal>
-                ))}
+                                <div className="info-header">
+                                    <h3>
+                                        {hasLink ? (
+                                            <a
+                                                href={proj.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{ color: 'inherit', textDecoration: 'none' }}
+                                            >
+                                                {proj.title}
+                                            </a>
+                                        ) : (
+                                            proj.title
+                                        )}
+                                    </h3>
+                                </div>
+
+                                <p className="project-description">{proj.description}</p>
+                            </div>
+                        </Reveal>
+                    )
+                })}
             </div>
         </div>
     </div>
