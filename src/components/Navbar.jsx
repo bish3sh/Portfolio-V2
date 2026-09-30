@@ -28,7 +28,7 @@ const Navbar = () => {
                         <a href="https://www.linkedin.com/in/bishesh-maharjan" className="icon-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             in
                         </a>
-                        <button className="cta-btn" onClick={() => window.open('/Portfolio.pdf', '_blank')}>
+                        <button className="cta-btn" onClick={() => window.open('/Portfolio2.pdf', '_blank')}>
                             Resume
                         </button>
                     </div>

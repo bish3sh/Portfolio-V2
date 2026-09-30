@@ -16,17 +16,17 @@ const timelineData = [
     {
         date: '2024 - 2025',
         title: 'Arete Viva SEO',
-        text: 'Started my working journey as a UI/UX Designer in Arete Viva SEO.'
+        text: 'Started my working journey as a UI/UX Designer.'
     },
     {
-        date: '2025 - Present',
+        date: '2025 - 2026',
         title: 'RABS International',
-        text: 'Currently working as an IT Officer in RABS International.'
+        text: 'Then worked as a Creative Lead.'
     },
     {
-        date: '2026 - Present',
+        date: '2026',
         title: 'Chitra Tech',
-        text: 'Currently working as a Creative Lead in Chitra Tech.'
+        text: 'Then worked as a Frontend Developer Intern.'
     },
 ]
 

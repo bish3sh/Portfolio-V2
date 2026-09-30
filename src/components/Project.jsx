@@ -50,7 +50,7 @@ const simpleProjects = [
 const selectedProjects = [
     {
         title: 'Mina',
-        description: 'A modern and intelligent telemedicine platform developed as a university project, hackthon project to offer a seamless experience for online medical consultations, appointment bookings, and AI-assisted healthcare support.',
+        description: 'A modern and intelligent telemedicine platform developed to offer a seamless experience for online medical consultations, appointment bookings, and AI-assisted healthcare support.',
         image: minaImg,
         hoverImage: minaImg2,
         tech: ['React', 'Tailwind', 'Node.js', 'Express', 'Firebase', 'WebRTC'],
