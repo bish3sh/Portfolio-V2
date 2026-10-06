@@ -6,27 +6,27 @@ const timelineData = [
     {
         date: '2019 - 2021',
         title: 'GIHE',
-        text: 'Completed +2 by taking the Physical Courses in Science field in GIHE college.'
+        text: '+2 in Science field in GIHE college'
     },
     {
         date: '2021 - 2025',
         title: 'Kantipur City College',
-        text: 'Currently attending Bachelor in Computer Application(IT) in Kantipur City College.'
+        text: 'Bachelor in Computer Application(IT) in Kantipur City College'
     },
     {
         date: '2024 - 2025',
         title: 'Arete Viva SEO',
-        text: 'Started my working journey as a UI/UX Designer.'
+        text: 'UI/UX Designer'
     },
     {
         date: '2025 - 2026',
         title: 'RABS International',
-        text: 'Then worked as a Creative Lead.'
+        text: 'Lead Designer'
     },
     {
         date: '2026',
         title: 'Chitra Tech',
-        text: 'Then worked as a Frontend Developer Intern.'
+        text: 'Frontend Developer Intern'
     },
 ]
 

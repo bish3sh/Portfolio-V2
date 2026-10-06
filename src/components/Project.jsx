@@ -18,6 +18,8 @@ import chitraImg from '../assets/chitra.png'
 import chitraImg2 from '../assets/chitra-2.png'
 import bodhisattvaImg from '../assets/bodhi.png'
 import bodhisattvaImg2 from '../assets/bodhi-2.png'
+import saudImg from '../assets/saud.png'
+import saudImg2 from '../assets/saud-2.png'
 import Reveal from './Reveal'
 
 const simpleProjects = [
@@ -64,6 +66,22 @@ const selectedProjects = [
         tech: ['React (TypeScript)', 'Tailwind CSS', 'Radix UI', 'Lenis', 'Firebase'],
         link: 'https://chitratech.com.np/'
     },
+     {
+        title: 'SAUD Leather',
+        description: 'A modern online clothing store designed for effortless catalog browsing, personalized style discovery, and a seamless checkout experience.',
+        image: saudImg,
+        hoverImage: saudImg2,
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        link: 'https://saudleather.com.np/'
+    }, 
+    {
+        title: 'RaktaSewa',
+        description: 'A real-time blood bank platform built to connect donors with emergency requests, streamline inventory tracking, and speed up life-saving blood distribution.',
+        image: raktImg,
+        hoverImage: raktImg2,
+        tech: ['HTML', 'CSS', 'JavaScript', 'Php'],
+        link: 'https://sudeep845.github.io/Hopedrops/'
+    },
     {
         title: 'Bodhisattva International',
         description: 'A modern web platform designed to digitize the gallery experience for art enthusiasts and museum visitors.',
@@ -88,14 +106,7 @@ const selectedProjects = [
         tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)','React Native', 'PHP', 'MySQL'],
         link: ''
     },
-    // {
-    //     title: 'RaktaSewa',
-    //     description: 'A real-time blood bank platform built to connect donors with emergency requests, streamline inventory tracking, and speed up life-saving blood distribution.',
-    //     image: raktImg,
-    //     hoverImage: raktImg2,
-    //     tech: ['HTML', 'CSS', 'JavaScript', 'Php'],
-    //     link: 'https://sudeep845.github.io/Hopedrops/'
-    // },
+    
     //  {
     //     title: 'Aanya',
     //     description: 'A modern online clothing store designed for effortless catalog browsing, personalized style discovery, and a seamless checkout experience.',
@@ -104,6 +115,7 @@ const selectedProjects = [
     //     tech: ['HTML', 'CSS', 'JavaScript'],
     //     link: 'https://bish3sh.github.io/To-do-Web-App/'
     // }, 
+
 ]
 
 const Project = () => {
@@ -173,14 +185,14 @@ const Project = () => {
                             </CardTag>
 
                             <div className="project-info">
-                                <div className="project-tags">
+                                {/* <div className="project-tags">
                                     {proj.tech.map((t) => (
                                         <span className="tag-pill" key={t}>
                                             <span className="dot"></span>
                                             {t}
                                         </span>
                                     ))}
-                                </div>
+                                </div> */}
 
                                 <div className="info-header">
                                     <h3>
