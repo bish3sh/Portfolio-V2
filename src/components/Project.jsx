@@ -98,14 +98,14 @@ const selectedProjects = [
         tech: ['React', 'CSS3', 'Node.js'],
         link: 'https://neweranepal.vercel.app/'
     },
-    {
-        title: 'What2Eat',
-        description: 'An intuitive, modern food ordering app designed for seamless menu browsing, customization, and real-time tracking.',
-        image: what2eatImg,
-        hoverImage: what2eatImg2,
-        tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)','React Native', 'PHP', 'MySQL'],
-        link: ''
-    },
+    // {
+    //     title: 'What2Eat',
+    //     description: 'An intuitive, modern food ordering app designed for seamless menu browsing, customization, and real-time tracking.',
+    //     image: what2eatImg,
+    //     hoverImage: what2eatImg2,
+    //     tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)','React Native', 'PHP', 'MySQL'],
+    //     link: ''
+    // },
     
     //  {
     //     title: 'Aanya',
