@@ -28,7 +28,7 @@ const Navbar = () => {
                         <a href="https://www.linkedin.com/in/bishesh-maharjan" className="icon-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             in
                         </a>
-                        <button className="cta-btn" onClick={() => window.open('/Bishesh-CV.pdf', '_blank')}>
+                        <button className="cta-btn" onClick={() => window.open('/Bishesh-CV-2026.pdf', '_blank')}>
                             Resume
                         </button>
                     </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                         <button
                             className="mobile-cta-btn"
                             onClick={() => {
-                                window.open('/Bishesh-CV.pdf', '_blank')
+                                window.open('/Bishesh-CV-2026.pdf', '_blank')
                                 setIsOpen(false)
                             }}
                         >
