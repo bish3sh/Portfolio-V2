@@ -6,12 +6,12 @@ const services = [
     {
         title: 'Frontend Development',
         icon: 'bx bx-code-alt',
-        tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS'],
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript'],
     },
     {
         title: 'Backend Development',
         icon: 'bx bx-server',
-        tech: ['Python', 'Java', 'C++', 'C#', 'Node.js'],
+        tech: ['Python', 'Java', 'C++', 'C#', 'Node.js', 'MySQL'],
     },
     {
         title: 'UI/UX Designing',

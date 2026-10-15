@@ -90,14 +90,14 @@ const selectedProjects = [
         tech: ['React (TypeScript)', 'Tailwind CSS'],
         link: 'https://bodhisattvainternational.vercel.app/'
     },
-    {
-        title: 'New Era',
-        description: 'A sleek digital footwear boutique engineered for immersive collection exploration, dynamic fit guidance, and a friction-free purchase journey.',
-        image: neweraImg,
-        hoverImage: neweraImg2,
-        tech: ['React', 'CSS3', 'Node.js'],
-        link: 'https://neweranepal.vercel.app/'
-    },
+    // {
+    //     title: 'New Era',
+    //     description: 'A sleek digital footwear boutique engineered for immersive collection exploration, dynamic fit guidance, and a friction-free purchase journey.',
+    //     image: neweraImg,
+    //     hoverImage: neweraImg2,
+    //     tech: ['React', 'CSS3', 'Node.js'],
+    //     link: 'https://neweranepal.vercel.app/'
+    // },
     // {
     //     title: 'What2Eat',
     //     description: 'An intuitive, modern food ordering app designed for seamless menu browsing, customization, and real-time tracking.',

@@ -26,7 +26,7 @@ const timelineData = [
     {
         date: '2026',
         title: 'Chitra Tech',
-        text: 'Frontend Developer Intern'
+        text: 'Frontend Developer'
     },
 ]
 
